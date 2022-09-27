@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #eeeeee;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.testimonial-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 760px;
+  border-radius: 15px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 60px;
+  margin: 20px auto;
+}
+
+.user .user-image {
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+
+}
+
+.user {
+  width: 320px;
+  height: 320px;
+  background-image: url('https://raw.githubusercontent.com/DmytroTarasiuk/testimonials-switcher/6290b6caaa134e4cdad689735779c5e6eeb67691/images/pattern-bg.svg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.progress-bar {
+background-color: lightgreen;
+height: 6px;
+width: 580px;
+position: absolute;
+top: -2%;
+    left: -290px;
+    animation: grow 10s linear infinite;
+    transform-origin: left;
+    color: grey;
+}
+
+@keyframes grow {
+    0% {
+      transform: scaleX(0);
+    }
+}
+
+.user-feedback {
+    position: relative;
+    z-index: 100;
+    left: 50px;
+    width: 350px;
+}
+
+.testimonial {
+    line-height: 20px;
+    text-align: justify;
+    font-size: 14px;
+    color: grey;
+}
+
+.quotes {
+    height: 50px;
+    width: 60px;
+    position: relative;
+    top: 35px;
+    left: 35px;
+}
+
+
+@media (max-width: 760px) {
+    .testimonial-container {
+        flex-direction: column;
+        padding: 20px 30px;
+        height: auto;
+        margin: 0;
+    }
+    .user-feedback {
+        position: relative;
+        z-index: 100;
+        left: 0;
+        width: 350px;
+    }
+    
+    .progress-bar {
+        top: 102%;
+        left: 0;
+        width: 100%;
+    }
+        
+}
+
+@media (max-width: 420px) {
+    .testimonial-container {
+        width: 100vw;
+        height: auto;
+        padding: 0 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    .user-feedback {
+        width: 80vw;
+    }
+    .user {
+        width: 90vw;
+        height: auto;
+    }
+    .user .user-image {
+        position: static;
+        width: 100%;
+        height: 100%;
+    }
+  }
